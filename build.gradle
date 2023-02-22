@@ -1,0 +1,25 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        mavenLocal()
+    }
+}
+
+plugins {
+    id "io.github.reyerizo.gradle.jcstress" version "0.8.15"
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+jcstress {
+    verbose = true
+    timeMillis = "200"
+    iterations = 1
+    forks = 1
+}
